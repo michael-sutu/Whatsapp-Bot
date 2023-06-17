@@ -7,7 +7,11 @@ const { getFirestore, setDoc, doc, getDoc, query, getDocs, collection } = requir
 const app = express()
 
 app.listen(5000)
-const client = new Client()
+
+const client = new Client({
+    authStrategy: new LocalAuth()
+})
+
 client.initialize()
 let phone = null
 
