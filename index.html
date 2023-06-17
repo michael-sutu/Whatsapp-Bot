@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input placeholder="Phone Number" type="number">
+        <button>Start Conversation</button>
+        <script>
+            document.querySelector("button").addEventListener("click", (e) => {
+                fetch(`/start?number=${document.querySelector("input").value}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        alert(data)
+                    })
+            })
+        </script>
+    </body>
+</html>
