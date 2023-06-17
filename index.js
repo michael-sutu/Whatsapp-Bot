@@ -91,6 +91,7 @@ let getResponse = function (messageHistory, newMessage) {
 }
 
 client.on('qr', (qr) => {
+    console.log(qr)
     qrcode.generate(qr, { small: true })
 })
 
