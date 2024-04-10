@@ -15,15 +15,7 @@ const client = new Client({
 client.initialize()
 let phone = null
 
-const firebaseConfig = {
-    apiKey: "AIzaSyDG2ffZQhmO0xFmFPTy4Gt_CS8tSQD7Aw0",
-    authDomain: "shepherd-a1e51.firebaseapp.com",
-    projectId: "shepherd-a1e51",
-    storageBucket: "shepherd-a1e51.appspot.com",
-    messagingSenderId: "497639325389",
-    appId: "1:497639325389:web:fe2848ffa4c09af9237384",
-    measurementId: "G-855TE47MY1"
-}
+const firebaseConfig = {} // Your Firebase Config Here
 initializeApp(firebaseConfig)
 const db = getFirestore()
 
@@ -82,7 +74,7 @@ let getResponse = function (messageHistory, newMessage) {
              method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + "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"
+                'Authorization': 'Bearer ' + "BEARER_AUTH_HERE"
             },
             body: JSON.stringify({
                 model: 'gpt-3.5-turbo',
